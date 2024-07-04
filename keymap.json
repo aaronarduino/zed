@@ -1,0 +1,32 @@
+[
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      "ctrl-h": "workspace::ActivatePreviousPane",
+      "ctrl-l": "workspace::ActivateNextPane",
+      "ctrl-shift-h": "pane::SplitLeft",
+      "ctrl-shift-l": "pane::SplitRight",
+      "ctrl-shift-j": "pane::SplitDown",
+      "ctrl-q": "pane::CloseCleanItems",
+      "space f": "pane::DeploySearch",
+      "space a": "workspace::ToggleRightDock",
+      "space g": "editor::OpenExcerpts",
+      "space h": "editor::ToggleHunkDiff",
+      "space w": "workspace::Save",
+      "space c": "pane::CloseActiveItem",
+      "space e": ["workspace::ToggleLeftDock", "project_panel::ToggleFocus"]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space-w": "workspace::Save",
+      "space-c": "pane::CloseActiveItem",
+      "l": "project_panel::Open"
+    }
+  }
+]
